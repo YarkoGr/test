@@ -1,0 +1,65 @@
+.our-team {
+    @include flex(center, center, column);
+    padding: 50px 0 80px;
+    background-color: $bg-light-grey;
+    &__icon {
+        margin-bottom: 34px;
+    }
+    &__title {
+        margin-bottom: 67px;
+    }
+    &__carousel {
+        width: 80%;
+    }
+    &__carousel-card {
+        text-align: center;
+        position: relative;
+        border-right: 15px solid $bg-light-grey;
+        border-left: 15px solid $bg-light-grey;
+    }
+    &__carousel-card-img-wrapper {
+        position: absolute;
+        margin: 0 auto;
+        text-align: center;
+        width: 241px;
+        @include padding-hack(72.3%, cover);
+        bottom: -160px;
+        img {
+            border: 10px solid $bg-light-grey;
+            border-radius: 50%;
+        }
+        margin-bottom: 48px;
+    }
+    &__carousel-card-subscribe {
+        background-color: $white;
+        padding: 164px 0 50px;
+    }
+    &__carousel-card-title {
+        @include text($h24, 700, $main-color);
+        margin-bottom: 34px;
+        text-transform: uppercase;
+    }
+    &__carousel-card-subtitle {
+        @include text($h24, 300, $card-subtitle);
+        font-style: italic;
+    }
+    &__carousel-card-socials {
+        background-color: $main-color;
+        @include flex(center, center, wrap);
+        padding: 19px 0;
+    }
+    &__carousel-card-socials-item:not(:last-child) {
+        margin-right: 24px;
+    }
+    .slick-next:before {
+        content: url(../../assets/svg/arrowNextGrey.svg);
+        fill: #665f60;
+    }
+    .slick-prev:before {
+        content: url(../../assets/svg/arrowPrewGrey.svg);
+    }
+    .slick-prev .slick-next {
+        position: relative;
+        bottom: -460px;
+    }
+}

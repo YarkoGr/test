@@ -1,10 +1,14 @@
 <template>
-  <button class="the-button">Learn More</button>
+  <button class="the-button">
+    {{ buttonName }}
+  </button>
 </template>
+
 
 <script>
 export default {
   name: "TheButton",
+  props: ["buttonName"],
 };
 </script>
 <style lang="scss">

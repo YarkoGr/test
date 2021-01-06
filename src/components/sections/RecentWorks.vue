@@ -6,17 +6,23 @@
       class="recent-works__icon"
     />
     <h2 class="recent-works__title">RECENT WORKS</h2>
-    <div class="recent-works__slider">
-      <the-swiper />
-    </div>
+    <the-carousel />
+    <the-button buttonName="View Gallery" />
   </div>
 </template>
 
 <script>
-import TheSwiper from "../TheSwiper.vue";
+import TheButton from "../TheButton.vue";
+import TheCarousel from "../TheCarousel.vue";
+
 export default {
-  components: { TheSwiper },
+  components: { TheCarousel, TheButton },
   name: "RecentWorks",
+  data() {
+    return {
+      buttonName: "View Gallery",
+    };
+  },
 };
 </script>
 
@@ -34,5 +40,14 @@ export default {
     @include text($h36, 400);
     margin-bottom: 67px;
   }
+  .the-button {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.the-carousel {
+  width: 60%;
+  margin-bottom: 102px;
 }
 </style>

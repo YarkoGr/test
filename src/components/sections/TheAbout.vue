@@ -22,7 +22,7 @@
         vestibulum. Maecenas faucibus mollis interdum. Cras mattis consectetur
         purus sit amet fermentum. Sed posuere consectetur est at lobortis.</span
       >
-      <the-button></the-button>
+      <the-button buttonName="Learn More" />
     </div>
   </div>
 </template>
