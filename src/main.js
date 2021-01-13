@@ -2,12 +2,16 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import "./styles/style.scss";
 
-// import VueAwesomeSwiper from "vue-awesome-swiper";
-// import "swiper/swiper-bundle.css";
-// import "swiper/swiper.min.css";
-// Vue.use(VueAwesomeSwiper);
+import * as VueGoogleMaps from "vue2-google-maps";
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: process.env.VUE_APP_GOOGLE_APIKEY,
+        libraries: "places",
+    },
+});
+
+import "./styles/style.scss";
 
 Vue.config.productionTip = false;
 

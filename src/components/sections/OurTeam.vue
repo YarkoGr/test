@@ -22,23 +22,7 @@
               item.subtitle
             }}</span>
           </div>
-          <ul class="our-team__carousel-card-socials">
-            <li
-              class="our-team__carousel-card-socials-item"
-              v-for="(element, idx) in socials"
-              :key="idx"
-            >
-              <a
-                :href="element.link"
-                target="_blank"
-                class="our-team__carousel-card-socials-item-link"
-                ><img
-                  :src="element.icon"
-                  :alt="element.name"
-                  class="our-team__carousel-card-socials-item-link-img"
-              /></a>
-            </li>
-          </ul>
+          <social-icons />
         </div>
       </VueSlickCarousel>
     </div>
@@ -48,10 +32,12 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import SocialIcons from "../SocialIcons.vue";
 export default {
   name: "OurTeam",
   components: {
     VueSlickCarousel,
+    SocialIcons,
   },
   data() {
     return {
@@ -70,7 +56,7 @@ export default {
               slidesToShow: 3,
               slidesToScroll: 1,
               infinite: true,
-              dots: true,
+              dots: false,
             },
           },
           {
@@ -110,33 +96,6 @@ export default {
           img: "https://picsum.photos/926/695?random=2",
           title: "Yarik Pasko",
           subtitle: "Front End Developer",
-        },
-      ],
-      socials: [
-        {
-          name: "behance",
-          icon: require("@/assets/social/behance.png"),
-          link: "https://www.behance.net/",
-        },
-        {
-          name: "facebook",
-          icon: require("@/assets/social/facebook.png"),
-          link: "https://www.facebook.com/",
-        },
-        {
-          name: "google",
-          icon: require("@/assets/social/google.png"),
-          link: "https://www.google.com.ua",
-        },
-        {
-          name: "linkedin",
-          icon: require("@/assets/social/linked-in.png"),
-          link: "https://www.linkedin.com",
-        },
-        {
-          name: "twitter",
-          icon: require("@/assets/social/twitter.png"),
-          link: "https://twitter.com",
         },
       ],
     };

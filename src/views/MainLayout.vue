@@ -6,6 +6,7 @@
     <recent-works />
     <our-team />
     <the-contact />
+    <the-footer />
   </div>
 </template>
 <script>
@@ -15,6 +16,7 @@ import TheAbout from "../components/sections/TheAbout";
 import RecentWorks from "../components/sections/RecentWorks";
 import OurTeam from "../components/sections/OurTeam.vue";
 import TheContact from "../components/sections/TheContact.vue";
+import TheFooter from "../components/sections/TheFooter.vue";
 
 export default {
   name: "MainLayout",
@@ -25,6 +27,7 @@ export default {
     RecentWorks,
     OurTeam,
     TheContact,
+    TheFooter,
   },
 };
 </script>

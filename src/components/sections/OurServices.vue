@@ -72,7 +72,7 @@ export default {
     @include flex(center, center, column);
     width: 50%;
     text-align: center;
-    height: 401px;
+    padding: 100px 0 134px;
     img {
       margin-bottom: 30px;
     }
@@ -93,7 +93,10 @@ export default {
     @include flex(start, center, column);
     text-align: center;
     max-width: 34%;
-    background: linear-gradient($services-color, $services-color),
+    background: linear-gradient(
+        rgba(193, 191, 217, 0.5),
+        rgba(193, 191, 217, 0.5)
+      ),
       url("../../assets/bg-services.png") no-repeat center;
     padding: 117px 33px 0 33px;
     img {

@@ -1,0 +1,103 @@
+.the-contact {
+    position: relative;
+    text-align: center;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $first-screen-bg;
+        z-index: 1;
+    }
+    .google-map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__wrapper {
+        z-index: 10;
+        position: relative;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+    &__icon {
+        margin-bottom: 25px;
+    }
+    &__title {
+        @include text($h36, 400);
+        margin-bottom: 51px;
+    }
+    &__slide-button-wrapper {
+        @include flex(stretch, flex-end, column);
+        overflow: hidden;
+    }
+    &__slide-button {
+        @include flex(center, center);
+        height: 92px;
+        transform: translateX(176px);
+        transition: transform 0.5s ease;
+        &:hover {
+            transform: translateX(0);
+        }
+    }
+    &__slide-button-icon {
+        width: 92px;
+        height: 100%;
+        @include flex(center, center);
+        background-color: $main-color;
+        transition: display 0.8s ease;
+    }
+    &__slide-button-text {
+        @include flex(center, center);
+        max-width: 176px;
+        padding: 0 41px;
+        height: 100%;
+        background-color: $bg-light-grey-opaciti;
+        transition: display 0.8s ease;
+    }
+    &__form {
+        @include flex(center, center, column);
+        [placeholder] {
+            font-style: italic;
+            font-size: $h18;
+        }
+        input {
+            min-width: 415px;
+            border: none;
+            border-radius: 3px;
+            padding: 23px 28px;
+            margin-bottom: 26px;
+            background-color: $bg-light-grey-opaciti;
+            outline: none;
+        }
+        input:not(:last-child) {
+            margin-right: 31px;
+        }
+        textarea {
+            width: 100%;
+            padding: 23px 28px;
+            background-color: $bg-light-grey-opaciti;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            margin-bottom: 54px;
+        }
+    }
+    &__form-btn {
+        height: 71px;
+        padding: 0 69px;
+        background-color: $main-color;
+        border: none;
+        border-bottom: 5px solid #8783b0;
+        border-radius: 3px;
+        @include text($h15, 700);
+        font-family: ProximaNova;
+        outline: none;
+        cursor: pointer;
+    }
+}

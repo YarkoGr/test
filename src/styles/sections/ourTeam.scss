@@ -1,4 +1,9 @@
 .our-team {
+    .social-icons {
+        background-color: $main-color;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
     @include flex(center, center, column);
     padding: 50px 0 80px;
     background-color: $bg-light-grey;
@@ -6,6 +11,7 @@
         margin-bottom: 34px;
     }
     &__title {
+        @include text($h36, 400, $card-subtitle);
         margin-bottom: 67px;
     }
     &__carousel {
@@ -18,15 +24,13 @@
         border-left: 15px solid $bg-light-grey;
     }
     &__carousel-card-img-wrapper {
-        position: absolute;
-        margin: 0 auto;
-        text-align: center;
-        width: 241px;
         @include padding-hack(72.3%, cover);
         bottom: -160px;
         img {
+            margin: 0 auto;
             border: 10px solid $bg-light-grey;
             border-radius: 50%;
+            max-width: 242px;
         }
         margin-bottom: 48px;
     }
@@ -45,7 +49,7 @@
     }
     &__carousel-card-socials {
         background-color: $main-color;
-        @include flex(center, center, wrap);
+        @include flex(center, center, row, wrap);
         padding: 19px 0;
     }
     &__carousel-card-socials-item:not(:last-child) {
